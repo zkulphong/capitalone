@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Capital One/Mindsumo Challenge 2018 - Home</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+    </head>
+    <body>
+        <div id="header-wrapper">
+            <div id="header-subwrapper">
+                <h1 id="header-title">San Francisco<br>Emergency Dispatches</h1>
+                <h3 id="header-subtext">Data Visuals, Predictions, and Optimizations regarding Emergency Calls in the
+                San Francisco Area. This site was created by Zak Kulphongpatana for Capital One's 2018 Software Engineering Summit Application/Mindsumo Challenge</h3>
+                <ul id="nav-bar">
+                    <li class="nav-object"><a href="{{ url_for('visualize') }}">Visualize</a></li>
+                    <li class="nav-object"><a href="{{ url_for('predict') }}">Predict</a></li>
+                    <li class="nav-object"><a href="{{ url_for('improve') }}">Improve</a></li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>

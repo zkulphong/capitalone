@@ -1,0 +1,39 @@
+<html lang="en">
+    <head>
+        <title>Capital One/Mindsumo Challenge 2018 - Predict</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='predict.css') }}">
+    </head>
+    <body>
+        <ul id="nav-bar">
+            <li class="nav-object"><a href="{{ url_for('index') }}">Home</a></li>
+            <li class="nav-object"><a href="{{ url_for('visualize') }}">Visualize</a></li>
+            <li class="nav-object"><a href="{{ url_for('improve') }}">Improve</a></li>
+        </ul>
+        <h1 id="predict-title">Data Visuals</h1>
+        <div id="predict">
+            <form method="POST">
+                <h1>Predict Dispatch</h1>
+                <h3><br>Input Address</h3>
+                <input name="address" type="text" placeholder="Golden Gate Bridge, San Francisco, CA">
+                <h3><br>Input Time</h3>
+                <input name="time" type="time" value="12:00">
+                <h2><br></h2>
+                <input type="submit" value="Submit">
+                <h3><br><br></h3>
+                <h1>Prediction<br></h1>
+                <h1 id="prediction">{{prediction}}</h1>
+            </form>
+        </div>
+        <div id="predict-wrapper">
+            <div id="predict-subwrapper">
+                <h1>Frequency of Dispatch by Location</h1>
+                <div id="map-wrapper">
+                    <div id="map"></div>
+                    <script type="text/javascript" src="{{ url_for('static', filename='index.js') }}" onload="initMap()"></script>
+                </div>
+            </div>
+        </div>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_lNtI7GW1Qu7InxmtEKpPq8_BIvCmOYM&libraries=visualization&callback=initMap"></script>
+    </body>
+</html>

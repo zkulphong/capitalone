@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Capital One/Mindsumo Challenge 2018 - Visualize</title>
+        <meta charset="utf-8">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='visualize.css') }}">
+    </head>
+    <body>
+        <ul id="nav-bar">
+            <li class="nav-object"><a href="{{ url_for('index') }}">Home</a></li>
+            <li class="nav-object"><a href="{{ url_for('predict') }}">Predict</a></li>
+            <li class="nav-object"><a href="{{ url_for('improve') }}">Improve</a></li>
+        </ul>
+        <div id="visualize-wrapper">
+            <h1 id="visuals-title">Data Visuals</h1>
+            <div id="charts">
+                <div id="charts-subwrapper">
+                    <div id="call-chart" class="chart-div">
+                        <canvas id="call" height="300"></canvas><script type="text/javascript" src="{{ url_for('static', filename='index.js') }}" onload="javascript:call()"></script>
+                        <h3 class="chart-text">The Groupings chart shows the severity of calls, with the majority being shown being potentially life-threatening incidents </h3>
+                    </div>
+                    <div id="dispatch-chart" class="chart-div">
+                        <canvas id="dispatch" height="300"></canvas><script type="text/javascript" src="{{ url_for('static', filename='index.js') }}" onload="javascript:dispatch()"></script>
+                        <h3 class="chart-text">The Types chart shows the event that prompted a dispatch, the majority of which are medical related</h3>
+                    </div>
+                    <div id="unit-chart" class="chart-div">
+                        <canvas id="unit" height="300"></canvas><script type="text/javascript" src="{{ url_for('static', filename='index.js') }}" onload="javascript:unit()"></script>
+                        <h3 class="chart-text">The Personnel chart shows the resources required in response to a dispatch, interestingly, engines were needed more frequently then medics, though the dispatch chart suggests that most dispatches are medical related</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
