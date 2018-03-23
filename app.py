@@ -22,7 +22,9 @@ def visualize():
 
 @app.route('/predict', methods=['GET', 'POST'])
 def predict():
-    """csv_name = "static/sfpd_dispatch_data_subset.csv"
+
+    logging.info('1')
+    csv_name = "static/sfpd_dispatch_data_subset.csv"
     data = pd.read_csv(csv_name)
     date_format = "%Y-%m-%d %H:%M:%S.%f UTC"
     time_format = "%H:%M"
@@ -43,7 +45,7 @@ def predict():
     filtered_result_long = float(geocode_result[0]['geometry']['location']['lng'])
 
     time_indices_withinHour = []
-
+    logging.info('2')
     for index, row in data.iterrows():
         temp = datetime.time(datetime.strptime(data['received_timestamp'][index], date_format))
         time1 = datetime.combine(date.today(), temp)
@@ -57,7 +59,7 @@ def predict():
         distance = math.sqrt(((filtered_result_lat - row_lat)**2)+((filtered_result_long - row_long)**2))
         top_ten_closest.append(distance)
         top_ten_indices.append(index)
-
+    logging.info('3')
     dTypes = {}
     for index in top_ten_indices:
         ref = top_ten_indices.index(index)
@@ -65,9 +67,9 @@ def predict():
             dTypes[data["call_type"][index]] = (1/(top_ten_closest[ref]**2));
         else:
             dTypes[data["call_type"][index]] = dTypes[data["call_type"][index]] + (1/(top_ten_closest[ref]**2))
-
+    logging.info('4')
     dTypes = (sorted(dTypes.iteritems(), key=lambda (k,v): (v,k)))
-
+    logging.info('5')
     prediction = ''
     prediction_val = 0
     prob_denominator = 0
@@ -76,7 +78,7 @@ def predict():
         prediction_val = value
         prob_denominator = prob_denominator + value
 
-    probability = str(int(round(prediction_val*100/prob_denominator)))"""
+    probability = str(int(round(prediction_val*100/prob_denominator)))
 
     return render_template("predict.html", prediction = "0")
 
