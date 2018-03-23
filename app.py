@@ -78,7 +78,7 @@ def predict():
 
     probability = str(int(round(prediction_val*100/prob_denominator)))
 
-    return render_template("predict.html", prediction = dTypes)
+    return render_template("predict.html", prediction = "Most Likely Dispatch at " + address + " at " + time + " is " + prediction + " with " + probability + "% probability")
 
 @app.route('/improve', methods=['GET'])
 def improve():
