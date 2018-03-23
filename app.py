@@ -71,7 +71,7 @@ def predict():
     prediction = ''
     prediction_val = 0
     prob_denominator = 0
-    for key, value in dTypes:
+    for key, value in dTypes.iteritems():
         prediction = key
         prediction_val = value
         prob_denominator = prob_denominator + value
