@@ -1,25 +1,31 @@
 # Capital One Software Engineering Summit Application 2018
 # San Fransisco Emergency Dispatch Challenge
 
-# callTypes.py, dispatchTypes.py, and unitTypes.py
-callTypes.py, dispatchTypes.py, and unitType.py were used respectively to generate the values in the chartjs charts on the Visualize.html page. The scripts counted the amounts of the different subcategories of "call_type_group", "call_type", and "unit_type" respectively.
 
-## Outputs of callTypes.py
+# Scripts in analysisScripts_sfpd folder
+analysisScripts_sfpd contains the scripts I used to analyze the contents of the sfpd_dispatch_data_subset.csv which is contained within .../analysisScripts_sfpd/sfpd-dispatch
+## callTypes.py, dispatchTypes.py, and unitTypes.py
+callTypes.py, dispatchTypes.py, and unitType.py were used respectively to generate the values in the chartjs charts on the Visualize.html page. The scripts counted the amounts for the different subcategories of "call_type_group", "call_type", and "unit_type" respectively.
+
+### Outputs of callTypes.py
 ```
 [('Potentially Life-Threatening', 4751), ('Non Life-threatening', 2467), ('Alarm', 2383), ('Fire', 391), (nan, 3)]
 ```
-## Outputs of dispatchTypes.py
+### Outputs of dispatchTypes.py
 ```
 [('Medical Incident', 6790), ('Alarms', 1060), ('Structure Fire', 1028), ('Traffic Collision', 409), ('Outside Fire', 143), ('Other', 128), ('Citizen Assist / Service Call', 113), ('Gas Leak (Natural and LP Gases)', 85), ('Train / Rail Incident', 54), ('Water Rescue', 53), ('Vehicle Fire', 44), ('Elevator / Escalator Rescue', 22), ('Electrical Hazard', 20), ('Smoke Investigation (Outside)', 14), ('Odor (Strange / Unknown)', 9), ('Fuel Spill', 9), ('HazMat', 2)]
 ```
-## Outputs of unitTypes.py
+### Outputs of unitTypes.py
 ```
 [('ENGINE', 3588), ('MEDIC', 3065), ('PRIVATE', 1153), ('TRUCK', 980), ('CHIEF', 725), ('RESCUE CAPTAIN', 271), ('RESCUE SQUAD', 167), ('SUPPORT', 32), ('INVESTIGATION', 10)]
 ```
 
-# longestDispatchTimes.py
+## generateHeatMapNodes.py
+generateHeatMapNodes.py was used to convert the coordinates of each dispatch into the javascript format required for Google Maps Heatmaps Javascript API. Result is printed to terminal to be copied and pasted into javascript file. As an improvement, I would implement my application such that generateHeatMapNodes.py wrote to a dynamic javascript file.
+
+## longestDispatchTimes.py
 longestDispatchTimes.py contains the calculations performed for the Analysis section of the Improve.html page. The average wait time for each zipcode was calculated. Wait time was calculated as the difference between the on_scene timestamp and received timestamp. Some dispatches did not have an on_scene timestamp so those dispatches were filtered out. The number of Dispatches within the time frame to each zipcode was calculated as well. Averages and Standard Deviations were printed out at the end.
-## Ouputs of longestDispatchTimes.py
+### Ouputs of longestDispatchTimes.py
 ```
 Zip Code, Average Wait Times, Number of Dispatches
 94127 0:45:19.506329 79
