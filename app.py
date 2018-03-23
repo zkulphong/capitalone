@@ -22,7 +22,7 @@ def visualize():
 
 @app.route('/predict', methods=['GET', 'POST'])
 def predict():
-    csv_name = "static/sfpd_dispatch_data_subset.csv"
+    """csv_name = "static/sfpd_dispatch_data_subset.csv"
     data = pd.read_csv(csv_name)
     date_format = "%Y-%m-%d %H:%M:%S.%f UTC"
     time_format = "%H:%M"
@@ -76,9 +76,9 @@ def predict():
         prediction_val = value
         prob_denominator = prob_denominator + value
 
-    probability = str(int(round(prediction_val*100/prob_denominator)))
+    probability = str(int(round(prediction_val*100/prob_denominator)))"""
 
-    return render_template("predict.html", prediction = "Most Likely Dispatch at " + address + " at " + time + " is " + prediction + " with " + probability + "% probability")
+    return render_template("predict.html", prediction = "0")
 
 @app.route('/improve', methods=['GET'])
 def improve():
