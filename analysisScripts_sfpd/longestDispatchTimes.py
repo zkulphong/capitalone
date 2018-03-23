@@ -28,7 +28,7 @@ sumNumIncidents = 0
 std_deviationAvgWaitTime = []
 std_deviationAvgNumInc = []
 
-print "Average Wait Times"
+print "Zip Code, Average Wait Times, Number of Dispatches"
 for index in range(0, len(zipcodeData)):
     print zipcodeData[index][0], zipcodeData[index][1][0], zipcodeData[index][1][1]
     sumAvgTimes = sumAvgTimes + zipcodeData[index][1][0]
@@ -39,7 +39,7 @@ for index in range(0, len(zipcodeData)):
 print "Average of Average Wait Times"
 print str(sumAvgTimes/len(zipcodeData))
 print "Standard Deviation of Wait Times"
-print str(np.std(std_deviationAvgWaitTime)/60) + "minutes"
+print str(np.std(std_deviationAvgWaitTime)/60) + " minutes"
 print "Average of Average Wait Times without 94127"
 print str((sumAvgTimes - timedelta(minutes = 45, seconds = 19.506329))/(len(zipcodeData) - 1))
 print "Average Number of Dispatches"
