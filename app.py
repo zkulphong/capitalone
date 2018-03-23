@@ -61,10 +61,10 @@ def predict():
     dTypes = {}
     for index in top_ten_indices:
         ref = top_ten_indices.index(index)
-        if data["call_type"][index] not in dTypes:
-            dTypes[data["call_type"][index]] = (1/(top_ten_closest[ref]**2));
+        if data["unit_type"][index] not in dTypes:
+            dTypes[data["unit_type"][index]] = (1/(top_ten_closest[ref]**2));
         else:
-            dTypes[data["call_type"][index]] = dTypes[data["call_type"][index]] + (1/(top_ten_closest[ref]**2))
+            dTypes[data["unit_type"][index]] = dTypes[data["unit_type"][index]] + (1/(top_ten_closest[ref]**2))
 
     dTypes = (sorted(dTypes.iteritems(), key=lambda (k,v): (v,k)))
 
