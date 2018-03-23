@@ -66,12 +66,12 @@ def predict():
         else:
             dTypes[data["unit_type"][index]] = dTypes[data["unit_type"][index]] + (1/(top_ten_closest[ref]**2))
 
-    #dTypes = (sorted(dTypes.items(), key=lambda (k,v): (v,k)))
+    dTypes = (sorted(dTypes.items(), key=lambda (k,v): (v,k)))
 
     prediction = ''
     prediction_val = 0
     prob_denominator = 0
-    for key, value in dTypes.items():
+    for key, value in dTypes:
         prediction = key
         prediction_val = value
         prob_denominator = prob_denominator + value
