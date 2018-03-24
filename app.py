@@ -78,7 +78,7 @@ def predict():
     dTypes = {}
 
     for index in time_indices_withinHour:
-        ref = top_indices_withinHour.index(index)
+        ref = time_indices_withinHour.index(index)
         if data["unit_type"][index] not in dTypes:
             dTypes[data["unit_type"][index]] = (1/(top_closest[ref]**2));
         else:
