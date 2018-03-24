@@ -3,8 +3,11 @@ import pandas as pd
 from datetime import datetime, timedelta
 import csv
 
+#import dataset into dataframe
 csv_name = "sfpd-dispatch/sfpd_dispatch_data_subset.csv"
 data = pd.read_csv(csv_name)
+
+
 date_format = "%Y-%m-%d %H:%M:%S.%f UTC"
 
 dTypes = {}

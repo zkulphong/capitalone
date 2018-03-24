@@ -1,13 +1,15 @@
 import pandas as pd
 import csv
 
+#import dataset into dataframe
 csv_name = "sfpd-dispatch/sfpd_dispatch_data_subset.csv"
 data = pd.read_csv(csv_name)
 
+#get dictionary with keys of types from "call_type_group" and values counting the frequency of each type
 dTypes = {}
 for dispatch in data["call_type_group"].values:
     if dispatch not in dTypes:
-        dTypes[dispatch] = 0;
+        dTypes[dispatch] = 1;
     else:
         dTypes[dispatch] = dTypes[dispatch] + 1
 

@@ -1,13 +1,14 @@
 import pandas as pd
 import csv
 
+#import dataset into dataframe
 csv_name = "sfpd-dispatch/sfpd_dispatch_data_subset.csv"
 data = pd.read_csv(csv_name)
 
 dTypes = {}
 for dispatch in data["unit_type"].values:
     if dispatch not in dTypes:
-        dTypes[dispatch] = 0;
+        dTypes[dispatch] = 1;
     else:
         dTypes[dispatch] = dTypes[dispatch] + 1
 

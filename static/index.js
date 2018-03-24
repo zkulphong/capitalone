@@ -1,4 +1,4 @@
-
+//generate Chartjs in visualize.css for "call"
 function call(){var ctx = document.getElementById("call").getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'bar',
@@ -35,7 +35,7 @@ var myChart = new Chart(ctx, {
     }
 });
 }
-
+//generate Chartjs in visualize.css for "dispatch"
 function dispatch(){var ctx = document.getElementById("dispatch").getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'bar',
@@ -96,7 +96,7 @@ var myChart = new Chart(ctx, {
     }
 });
 }
-
+//generate Chartjs in visualize.css for "unit"
 function unit(){var ctx = document.getElementById("unit").getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'bar',
@@ -143,7 +143,7 @@ var myChart = new Chart(ctx, {
 }
 
 var map, heatmap;
-
+//initialize Google Maps Javascript API
 function initMap() {
 map = new google.maps.Map(document.getElementById('map'), {
   zoom: 13,
@@ -189,7 +189,7 @@ function changeOpacity() {
 heatmap.set('opacity', heatmap.get('opacity') ? null : 0.2);
 }
 
-// Heatmap data: 500 Points
+// Heatmap data: 10,000 Points
 function getPoints() {
 return [
     new google.maps.LatLng(37.77444199483868, -122.5046792231959),
