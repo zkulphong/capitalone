@@ -1,6 +1,6 @@
 # Capital One Software Engineering Summit Summer Application 2018
 # San Fransisco Emergency Dispatch Challenge
-This website was built for the Capital One Software Engineering Summer Application 2018 by Zak Kulphongpatana. The challenge required that Data Visuals, Predictions, and Optimizations regarding Emergency Calls in the San Francisco Area be displayed in a web application or webpage. The website is hosted on Heroku and uses the Flask python framework. 
+This web app was built for the Capital One Software Engineering Summer Application 2018 by Zak Kulphongpatana. The challenge required that Data Visuals, Predictions, and Optimizations regarding Emergency Calls in the San Francisco Area be displayed in a web application or webpage. The web app uses the Flask python and is hosted on Heroku(pulled from Github).
 
 # Structure of Repository
 The top level of the repository has 5 files and 3 folders. requirements.txt, runtime.txt, and Procfile indicate the Python libraries/versions required for the app, the version of Python, and the setup of the Flask App, respectively, for Heroku. App.py initializes the Flask application and generates the webpages. README.md is also included in the toplevel.
