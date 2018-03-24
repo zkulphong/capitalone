@@ -28,7 +28,7 @@ sumNumIncidents = 0
 std_deviationAvgWaitTime = []
 std_deviationAvgNumInc = []
 
-print "Zip Code, Average Wait Times, Number of Dispatches"
+print "Zip Code, Average Wait Time, Number of Dispatch"
 for index in range(0, len(zipcodeData)):
     print zipcodeData[index][0], zipcodeData[index][1][0], zipcodeData[index][1][1]
     sumAvgTimes = sumAvgTimes + zipcodeData[index][1][0]
