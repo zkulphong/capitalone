@@ -15,7 +15,7 @@ In order to calculate the most likely dispatch given an address and time, the sf
 # Scripts in analysisScripts_sfpd folder
 analysisScripts_sfpd contains the scripts I used to analyze the contents of the sfpd_dispatch_data_subset.csv which is contained within .../analysisScripts_sfpd/sfpd-dispatch
 ## callTypes.py, dispatchTypes.py, and unitTypes.py
-callTypes.py, dispatchTypes.py, and unitType.py were used respectively to generate the values in the chartjs charts on the Visualize.html page. The scripts counted the amounts for the different subcategories of "call_type_group", "call_type", and "unit_type" respectively. An example of running a script is below:
+callTypes.py, dispatchTypes.py, and unitType.py were used respectively to generate the values in the chartjs charts on the Visualize.html page. The scripts counted the amounts for the different subcategories of "call_type_group", "call_type", and "unit_type" respectively. An example of running a script from terminal is below:
 
 ```python callTypes.py```
 
