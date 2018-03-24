@@ -6,6 +6,9 @@ This website was built for the Capital One Software Engineering Summer Applicati
 The top level of the repository has 5 files and 3 folders. requirements.txt, runtime.txt, and Procfile indicate the Python libraries/versions required for the app, the version of Python, and the setup of the Flask App, respectively, for Heroku. App.py initializes the Flask application and generates the webpages. README.md is also included in the toplevel.
 The three folders are analysisScripts_sfpd, static, and templates. analysisScripts_sfpd contains scripts used to analyze the dataset provided. Static contains the css, javascript, images, and dataset. Templates contains the html files.
 
+# App.py
+App.py initializes the Flask application and generates the webpages when the user navigates to the website. The index.html, visualize.html, and improve.html are rendered as the template without any changes by app.py. predict.html is rendered with the calculation of the dispatch prediction given an address and time. 
+
 # Scripts in analysisScripts_sfpd folder
 analysisScripts_sfpd contains the scripts I used to analyze the contents of the sfpd_dispatch_data_subset.csv which is contained within .../analysisScripts_sfpd/sfpd-dispatch
 ## callTypes.py, dispatchTypes.py, and unitTypes.py
