@@ -83,6 +83,11 @@ Standard Deviation of Number of Dispatches
 #### Optimize speed of Flask application: predict.html loads slowly and requires page refresh
 #### Fully implement Flat Ui design
 # Resources Used
+## Languages
+### Python 2.7.13
+### HTML5
+### CSS3
+### Javascript
 ## Python Libraries
 ### pandas
 ### numpy
