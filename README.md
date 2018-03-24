@@ -79,6 +79,7 @@ Standard Deviation of Number of Dispatches
 # Areas of Improvement
 #### Use analysisScripts_sfpd scripts outputs to dynamically update javascript files rather than manually entering ChartJS and Google Maps Javascript API data points. Allows, for changes to the dataset and automatically updating website accordingly.
 #### Optimize speed of Flask application: predict.html loads slowly and requires page refresh
+#### Fully implement Flat Ui design
 # Resources Used
 ## Python Libraries
 ### pandas
