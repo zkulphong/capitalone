@@ -7,11 +7,12 @@ import csv
 csv_name = "sfpd-dispatch/sfpd_dispatch_data_subset.csv"
 data = pd.read_csv(csv_name)
 
-
+#initialize dictionaries and set date format
 date_format = "%Y-%m-%d %H:%M:%S.%f UTC"
 dTypes = {}
 zipcodeData = {}
 
+#calculate total time in dataset spent waiting for each zip code.
 for index, row in data.iterrows():
     if type(data["on_scene_timestamp"][index]) is str:
         if data["zipcode_of_incident"][index] not in dTypes:
@@ -19,12 +20,15 @@ for index, row in data.iterrows():
         else:
             dTypes[data["zipcode_of_incident"][index]] = [dTypes[data["zipcode_of_incident"][index]][0] + datetime.strptime(data["on_scene_timestamp"][index], date_format) - datetime.strptime(data["received_timestamp"][index], date_format), dTypes[data["zipcode_of_incident"][index]][1] + 1]
 
+#calculate average wait time for each zip code
 for key, value in dTypes.iteritems():
     avg_time = value[0]/value[1]
     zipcodeData[key] = (avg_time, value[1])
 
+#sort average wait times for each zip code from highest to lowest
 zipcodeData = (sorted(zipcodeData.iteritems(), key=lambda (k,v): (v,k), reverse=True))
 
+#initialize variables, and lists to have standard deviation calculated from.
 sumAvgTimes = timedelta(hours = 0)
 sumNumIncidents = 0
 std_deviationAvgWaitTime = []
