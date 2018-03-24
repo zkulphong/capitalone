@@ -77,7 +77,7 @@ Standard Deviation of Number of Dispatches
 249.957082736
 ```
 # Resources Used
-## Python Resources
+## Python Libraries
 ### pandas
 ### numpy
 ### request
