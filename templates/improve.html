@@ -11,6 +11,7 @@
             <li class="nav-object"><a href="{{ url_for('index') }}">Home</a></li>
             <li class="nav-object"><a href="{{ url_for('visualize') }}">Visualize</a></li>
             <li class="nav-object"><a href="{{ url_for('predict') }}">Predict</a></li>
+            <li class="nav-object"><a href="https://github.com/zkulphong/capitalone">Github</a></li>
         </ul>
         <h1 id="improve-title">Improve</h1>
         <div id="improve">
@@ -41,7 +42,8 @@
             <h1 id="analysis-title">Analysis</h1>
             <h2>    Shown in the Table above are the zipcodes with the three highest average wait times after receiving a dispatch request.
                 The average of all average wait times is 11 minutes and 30 seconds whereas for, all of the above, the average wait time is over 15 minutes.
-                The most concerning of these is the average wait time in zipcode 94127 which is over 45 minutes. However, the standard deviation for all wait times is
+                The most concerning of these is the average wait time in zipcode 94127 which is over 45 minutes.<br><br>
+                The standard deviation for all wait times is
                 7 minutes which suggests that 94127 is an outlier given that it is greater than 3 standard deviations away from the average. The average wait time
                 without 94127 is about 10 minutes which is about a 13% decrease in time. <br><br>
                     94127 appears to be largely residential and a park containing the Mt. Davidson, the highest point in San Francisco.
@@ -52,7 +54,8 @@
                 wait times of below 10 minutes and required fewer than 100 dispatches in the time period. <br><br>
                     Another area of concern is 94105, which experiences the second highest average wait time around 19 minutes. There were 222 dispatches within that time period
                 suggesting that resources should be allocated there as well. 94129, the third highest average wait time around 15 minutes only required 29 dispatches, thus it is
-                a lower priority given the wait time within 1 standard deviation of the average of average wait times and fewer number of dispatches.
+                a lower priority given the wait time within 1 standard deviation of the average of average wait times and fewer number of dispatches.<br><br>
+                For additional information see my <a href="https://github.com/zkulphong/capitalone">Github</a> repository which contains additional results produced.
             </h2>
         </div>
     </body>
