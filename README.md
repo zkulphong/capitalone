@@ -37,7 +37,7 @@ generateHeatMapNodes.py was used to convert the coordinates of each dispatch int
 longestDispatchTimes.py contains the calculations performed for the Analysis section of the Improve.html page. The average wait time for each zipcode was calculated. Wait time was calculated as the difference between the on_scene timestamp and received timestamp. Some dispatches did not have an on_scene timestamp so those dispatches were filtered out. The number of Dispatches within the time frame to each zipcode was calculated as well. Averages and Standard Deviations were printed out at the end.
 ### Ouputs of longestDispatchTimes.py
 ```
-Zip Code, Average Wait Times, Number of Dispatches
+Zip Code, Average Wait Time, Number of Dispatch
 94127 0:45:19.506329 79
 94105 0:19:01.409909 222
 94129 0:15:33.517241 29
