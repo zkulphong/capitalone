@@ -21,15 +21,15 @@ callTypes.py, dispatchTypes.py, and unitType.py were used respectively to genera
 
 ### Outputs of callTypes.py
 ```
-[('Potentially Life-Threatening', 4751), ('Non Life-threatening', 2467), ('Alarm', 2383), ('Fire', 391), (nan, 3)]
+[('Potentially Life-Threatening', 4752), ('Non Life-threatening', 2468), ('Alarm', 2384), ('Fire', 392), (nan, 4)]
 ```
 ### Outputs of dispatchTypes.py
 ```
-[('Medical Incident', 6790), ('Alarms', 1060), ('Structure Fire', 1028), ('Traffic Collision', 409), ('Outside Fire', 143), ('Other', 128), ('Citizen Assist / Service Call', 113), ('Gas Leak (Natural and LP Gases)', 85), ('Train / Rail Incident', 54), ('Water Rescue', 53), ('Vehicle Fire', 44), ('Elevator / Escalator Rescue', 22), ('Electrical Hazard', 20), ('Smoke Investigation (Outside)', 14), ('Odor (Strange / Unknown)', 9), ('Fuel Spill', 9), ('HazMat', 2)]
+[('Medical Incident', 6791), ('Alarms', 1061), ('Structure Fire', 1029), ('Traffic Collision', 410), ('Outside Fire', 144), ('Other', 129), ('Citizen Assist / Service Call', 114), ('Gas Leak (Natural and LP Gases)', 86), ('Train / Rail Incident', 55), ('Water Rescue', 54), ('Vehicle Fire', 45), ('Elevator / Escalator Rescue', 23), ('Electrical Hazard', 21), ('Smoke Investigation (Outside)', 15), ('Odor (Strange / Unknown)', 10), ('Fuel Spill', 10), ('HazMat', 3)]
 ```
 ### Outputs of unitTypes.py
 ```
-[('ENGINE', 3588), ('MEDIC', 3065), ('PRIVATE', 1153), ('TRUCK', 980), ('CHIEF', 725), ('RESCUE CAPTAIN', 271), ('RESCUE SQUAD', 167), ('SUPPORT', 32), ('INVESTIGATION', 10)]
+[('ENGINE', 3589), ('MEDIC', 3066), ('PRIVATE', 1154), ('TRUCK', 981), ('CHIEF', 726), ('RESCUE CAPTAIN', 272), ('RESCUE SQUAD', 168), ('SUPPORT', 33), ('INVESTIGATION', 11)]
 ```
 
 ## generateHeatMapNodes.py
