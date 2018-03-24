@@ -89,9 +89,17 @@ Standard Deviation of Number of Dispatches
 ### CSS3
 ### Javascript
 ## Python Libraries
-### pandas
-### numpy
-### request
+### Werkzeug==0.14.1
+### Jinja2==2.10
+### MarkupSafe==1.0
+### itsdangerous==0.24
+### gunicorn==19.3.0
+### Flask==0.12.2
+### googlemaps==2.5.1
+### numpy==1.13.3
+### pandas==0.18.1
+### pandas-datareader==0.5.0
+### requests==2.18.4
 ## Javascript Resources
 ### Chartjs
 ### Google Maps Javascript API
