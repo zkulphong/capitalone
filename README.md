@@ -73,3 +73,10 @@ Average Number of Dispatches
 Standard Deviation of Number of Dispatches
 249.957082736
 ```
+# Resources Used
+### pandas
+### numpy
+### request
+### Chartjs
+### Google Maps Javascript API
+### 
