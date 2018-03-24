@@ -9,7 +9,6 @@ data = pd.read_csv(csv_name)
 
 
 date_format = "%Y-%m-%d %H:%M:%S.%f UTC"
-
 dTypes = {}
 zipcodeData = {}
 
@@ -31,7 +30,8 @@ sumNumIncidents = 0
 std_deviationAvgWaitTime = []
 std_deviationAvgNumInc = []
 
-print "Zip Code, Average Wait Time, Number of Dispatch"
+#print out Zip Codes, Average Wait Times, and Number of Dispatches
+print "Zip Code, Average Wait Time, Number of Dispatches"
 for index in range(0, len(zipcodeData)):
     print zipcodeData[index][0], zipcodeData[index][1][0], zipcodeData[index][1][1]
     sumAvgTimes = sumAvgTimes + zipcodeData[index][1][0]
@@ -39,6 +39,7 @@ for index in range(0, len(zipcodeData)):
     sumNumIncidents = sumNumIncidents + zipcodeData[index][1][1]
     std_deviationAvgNumInc.append(zipcodeData[index][1][1])
 
+#print out results
 print "Average of Average Wait Times"
 print str(sumAvgTimes/len(zipcodeData))
 print "Standard Deviation of Wait Times"
