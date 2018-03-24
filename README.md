@@ -4,7 +4,7 @@ This website was built for the Capital One Software Engineering Summer Applicati
 
 # Structure of Repository
 The top level of the repository has 5 files and 3 folders. requirements.txt, runtime.txt, and Procfile indicate the Python libraries/versions required for the app, the version of Python, and the setup of the Flask App, respectively, for Heroku. App.py initializes the Flask application and generates the webpages. README.md is also included in the toplevel.
-The three folders are analysisScripts_sfpd, static, and templates. analysisScripts_sfpd contains scripts used to analyze the dataset provided. Static contains the css, javascript, images, and dataset. Templates contains the html files.
+The three folders are analysisScripts_sfpd, static, and templates. analysisScripts_sfpd contains scripts used to analyze the dataset provided. Static contains the css, javascript, images, and dataset. Templates contains the html files. All Python is version 2.7.13.
 
 # App.py
 App.py initializes the Flask application and generates the webpages when the user navigates to the website. The index.html, visualize.html, and improve.html are rendered as the template without any changes by app.py. predict.html is rendered with the calculation of the dispatch prediction given an address and time. 
@@ -15,7 +15,9 @@ In order to calculate the most likely dispatch given an address and time, the sf
 # Scripts in analysisScripts_sfpd folder
 analysisScripts_sfpd contains the scripts I used to analyze the contents of the sfpd_dispatch_data_subset.csv which is contained within .../analysisScripts_sfpd/sfpd-dispatch
 ## callTypes.py, dispatchTypes.py, and unitTypes.py
-callTypes.py, dispatchTypes.py, and unitType.py were used respectively to generate the values in the chartjs charts on the Visualize.html page. The scripts counted the amounts for the different subcategories of "call_type_group", "call_type", and "unit_type" respectively.
+callTypes.py, dispatchTypes.py, and unitType.py were used respectively to generate the values in the chartjs charts on the Visualize.html page. The scripts counted the amounts for the different subcategories of "call_type_group", "call_type", and "unit_type" respectively. An example of running a script is below:
+
+```python callTypes.py```
 
 ### Outputs of callTypes.py
 ```
