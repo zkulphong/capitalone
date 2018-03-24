@@ -20,7 +20,7 @@ def returnIndex():
 def visualize():
     return render_template("visualize.html")
 
-@app.route('/predict', methods=['POST'])
+@app.route('/predict', methods=['POST', 'GET'])
 def predict():
     csv_name = "static/sfpd_dispatch_data_subset.csv"
     data = pd.read_csv(csv_name)
