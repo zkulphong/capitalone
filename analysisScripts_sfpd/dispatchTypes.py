@@ -5,6 +5,7 @@ import csv
 csv_name = "sfpd-dispatch/sfpd_dispatch_data_subset.csv"
 data = pd.read_csv(csv_name)
 
+#get dictionary with keys of types from "call_type" and values counting the frequency of each type in dataset
 dTypes = {}
 for dispatch in data["call_type"].values:
     if dispatch not in dTypes:
@@ -12,5 +13,6 @@ for dispatch in data["call_type"].values:
     else:
         dTypes[dispatch] = dTypes[dispatch] + 1
 
+#sort dictionary by largest to smallest values
 dTypes = (sorted(dTypes.iteritems(), key=lambda (k,v): (v,k), reverse=True))
 print dTypes
