@@ -12,15 +12,15 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
-@app.route('/index', methods=['GET'])
+@app.route('/index')
 def returnIndex():
     return render_template("index.html")
 
-@app.route('/visualize', methods=['GET'])
+@app.route('/visualize')
 def visualize():
     return render_template("visualize.html")
 
-@app.route('/predict', methods=['GET', 'POST'])
+@app.route('/predict', methods=['POST'])
 def predict():
     csv_name = "static/sfpd_dispatch_data_subset.csv"
     data = pd.read_csv(csv_name)
@@ -80,7 +80,7 @@ def predict():
 
     return render_template("predict.html", prediction = "Most Likely Dispatch at " + address + " at " + time + " is " + prediction + " with " + probability + "% probability")
 
-@app.route('/improve', methods=['GET'])
+@app.route('/improve')
 def improve():
     return render_template("improve.html")
 
